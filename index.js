@@ -71,7 +71,7 @@ async function run() {
             res.send(result);
         })
     } finally {
-        // client.close();
+        // client.close()
     }
 }
 run().catch(console.dir);
