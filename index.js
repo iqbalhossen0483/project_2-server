@@ -35,7 +35,7 @@ async function run() {
         app.get("/gallery", async (req, res) => {
             const result = await gallery.find({}).toArray();
             res.send(result);
-        })
+        });
 
         //post order
         app.post("/orders", async (req, res) => {
@@ -47,7 +47,7 @@ async function run() {
         app.get("/orders", async (req, res) => {
             const result = await orders.find({}).toArray();
             res.send(result)
-        })
+        });
 
         //delele order
         app.delete("/orders/:id", async (req, res) => {
