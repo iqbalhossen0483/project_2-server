@@ -30,6 +30,12 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result);
         });
+        app.get("/services/:id", async (req, res) => {
+            const id = req.params.id;
+            const quary = { _id: ObjectId(id) };
+            const result = await services.findOne(quary);
+            res.send(result);
+        })
 
         // get gallery
         app.get("/gallery", async (req, res) => {
