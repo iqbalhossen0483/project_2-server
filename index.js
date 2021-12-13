@@ -4,6 +4,7 @@ const { mongoDb } = require("./mongoDb");
 const serviceRouter = require("./router/services");
 const gallaryRouter = require("./router/gallery");
 const orderRouter = require("./router/order");
+const blogRouter = require("./router/blog");
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -25,6 +26,9 @@ async function run() {
 
         //order
         app.use("/orders", orderRouter);
+
+        //blog
+        app.use("/blogs", blogRouter);
 
     } finally {
         // client.close()
